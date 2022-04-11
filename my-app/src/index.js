@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // APP will be the father of all components
-import App from './App';
+import App from './containers/App';
 import 'tachyons';
-import CardList from './CardList'
-import { robots } from './robots';
+
 
 import reportWebVitals from './reportWebVitals';
 
