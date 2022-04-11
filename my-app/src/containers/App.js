@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import CardList from '../components/CardList';
 import Scroll from '../components/scroll';
 import { robots } from '../robots';
+import ErrorBoundry from '../components/ErrorBoundry'
 import SearchBox from '../components/SearchBox'
 // State and properties with React
 // React will read teh props received and renders
@@ -45,7 +46,9 @@ class App extends Component {
                 <h1> Robo friends</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <Scroll>
-                    <CardList robots={filteredRobots}/>
+                    <ErrorBoundry>
+                     <CardList robots={filteredRobots}/>
+                     </ErrorBoundry>
                 </Scroll>
                 </div>
             )
