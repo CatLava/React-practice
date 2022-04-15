@@ -20,7 +20,7 @@ function App() {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => setRobots(users));   
-    }, [])
+    }, []) // only run on change  
 
     // function to search with
     const onSearchChange = (event) => {
